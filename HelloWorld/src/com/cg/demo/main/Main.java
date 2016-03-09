@@ -2,16 +2,14 @@ package com.cg.demo.main;
 
 public class Main {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Hello World");
-		System.out.println("Hello World from branch");
-		System.out.println("Hello World from TestRepo");
-		System.out.println("Hello World from SKharab");
-		System.out.println("Hello World from Branch1");
+		Threads t = new Threads();
+		Threads t1 = new Threads();
+		Threads t2 = new Threads();
+	t.run();
+	t1.run();
+	t2.run();
 	}
 
 }
