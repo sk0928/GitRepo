@@ -36,14 +36,20 @@ public class ExcelReading {
 					level = messageName.get(i + 1).getLevel();
 				}
 				int temp_index=i+1;
-				for (int temp = 0; temp <= Counter; temp++) {
+				int c =0;
+				for (int temp = 1; temp <= Counter; temp++) {
+					
 					while(messageName.get(temp_index).getLevel()==level){
+						c++;
 						System.out.println("Hello");
+						System.out.println(str);
+						str = str.substring(messageName.get(temp_index).getLength());
+						System.out.println(str);
 						temp_index++;
 					}
 					temp_index=i+1;
 				}
-
+				i=i+(c/Counter);
 				count++;
 
 			} else {
