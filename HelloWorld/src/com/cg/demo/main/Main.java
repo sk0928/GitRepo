@@ -23,7 +23,7 @@ public class ExcelReading {
 		int level = 0;
 		for (int i = 0; i < messageName.size(); i++) {
 			if ((null != messageName.get(i))
-					&& (messageName.get(i).getName().contains("Jun") || messageName.get(i).getName().contains("jun"))) {
+					&& (messageName.get(i).getName().contains("Count") || messageName.get(i).getName().contains("Count"))) {
 				int ctemp = 0;
 				messageName.get(i).setValue(str.substring(0, messageName.get(i).getLength()));
 				System.out.println(messageName.get(i).getValue());
@@ -41,10 +41,9 @@ public class ExcelReading {
 					
 					while(messageName.get(temp_index).getLevel()==level){
 						c++;
-						System.out.println("Hello");
-						System.out.println(str);
+						messageName.get(temp_index).setValue(str.substring(0, messageName.get(temp_index).getLength()));
+						System.out.println(messageName.get(temp_index).getValue());
 						str = str.substring(messageName.get(temp_index).getLength());
-						System.out.println(str);
 						temp_index++;
 					}
 					temp_index=i+1;
