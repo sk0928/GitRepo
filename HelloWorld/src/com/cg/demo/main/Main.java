@@ -32,11 +32,11 @@ public class ExcelReading {
 				if (ctemp == 0) {
 					level = messageName.get(i + 1).getLevel();
 				}
+				for (int temp = 0; temp <= messageName.get(i).getLength(); temp++) {
 				while (messageName.get(i + 1).getLevel() == (messageName.get(i).getLevel())) {
-					for (int temp = 0; temp <= messageName.get(i).getLength(); temp++) {
 						System.out.println("hello");
+						i++;
 						}
-					i++;
 				}
 
 				count++;
